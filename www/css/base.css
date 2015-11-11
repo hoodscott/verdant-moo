@@ -1,19 +1,43 @@
-.personal {
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
 
+.flexcontainer {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.selector {
+    height: 22%;
+}
+
+.personal {
+    background-color:green;
 }
 
 .public {
-
+    background-color:orange;
 }
 
-.private{
-
+.private {
+    background-color:red;
 }
 
 .startstop {
-
+    background-color:blue;
 }
 
-.history {
+.stats {
+    background-color:grey;
+    height: 12%;
+}
 
+.app {
+    height:100%;
+    background-color:yellow;
 }
