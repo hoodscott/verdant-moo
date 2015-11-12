@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.app {
+    height:100%;
+    background-color:yellow;
+}
+
+.flexcontainer {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+#topbar {
+    background-color:grey;
+    height: 10%;
+}
+
+#tabs {
+    background-color: lime;
+    height:10%;
+}
+
+.tab {
+    height:100%;
+    width: 50%;
+    float: left;
+}
+
+#day-tab {
+    background-color:red;
+}
+
+#month-tab {
+    background-color:blue;
+}
+
+.content {
+    height:80%;
+}
+
+#day-content {
+    background-color:pink;
+}
+
+#month-content {
+    background-color:green;
+}
