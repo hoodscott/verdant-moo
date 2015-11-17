@@ -34,7 +34,7 @@ html, body {
 }
 
 .per_selected{
-    background-color:green !important;
+    background-color:forestgreen !important;
 }
 
 #personal_blank{
@@ -42,11 +42,11 @@ html, body {
 }
 
 #public {
-    background-color:wheat;
+    background-color:sandybrown;
 }
 
 .pub_selected{
-    background-color:orange !important;
+    background-color:chocolate !important;
 }
 
 #public_blank{
@@ -54,11 +54,11 @@ html, body {
 }
 
 #private {
-    background-color:hotpink;
+    background-color:indianred;
 }
 
 .priv_selected{
-    background-color:red !important;
+    background-color:crimson !important;
 }
 
 #private_blank{
@@ -74,11 +74,11 @@ html, body {
 }
 
 #start{
-     background-color: green;
+     background-color: forestgreen;
 }
 
 #stop{
-     background-color: red;
+     background-color: crimson;
 }
 
 #bottombar {
@@ -96,7 +96,7 @@ html, body {
     width:50%;
     float:left;
     display:inline-block;
-    background-color:yellow;
+    background-color:blueviolet;
 }
 
 #settings{
@@ -104,7 +104,7 @@ html, body {
     width:50%;
     float:right;
     display:inline-block;
-    background-color:pink;
+    background-color:cornflowerblue;
 }
 
 .content {
@@ -124,6 +124,12 @@ html, body {
     max-height: 100%;
     width: auto;
     height: 50%;
+}
+
+#bottombars img{
+    max-height: 25%;
+    width: auto;
+    height: 25%;
 }
 
 .content h4{
