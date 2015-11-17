@@ -30,15 +30,31 @@ html, body {
 }
 
 #personal {
-    background-color:green;
+    background-color:lightgreen;
+}
+
+.per_selected{
+    background-color:green !important;
 }
 
 #public {
-    background-color:orange;
+    background-color:wheat;
+}
+
+.pub_selected{
+    background-color:orange !important;
 }
 
 #private {
-    background-color:red;
+    background-color:hotpink;
+}
+
+.priv_selected{
+    background-color:red !important;
+}
+
+.deselected{
+    background-color:dimgrey !important;
 }
 
 #startstop {
