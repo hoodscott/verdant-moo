@@ -17,6 +17,14 @@ html, body {
     flex-direction: column;
 }
 
+.colcontainer {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
 .selector {
     height: 22%;
 }
@@ -37,7 +45,28 @@ html, body {
     background-color:blue;
 }
 
-#stats {
+#bottombar {
     background-color:grey;
     height: 12%;
+}
+
+#dumbdiv{
+    height:100%;
+    width:100%;
+}
+
+#stats{
+    height:100%;
+    width:50%;
+    float:left;
+    display:inline-block;
+    background-color:yellow;
+}
+
+#settings{
+    height:100%;
+    width:50%;
+    float:right;
+    display:inline-block;
+    background-color:pink;
 }

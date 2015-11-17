@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.app {
+    height:100%;
+    background-color:yellow;
+}
+
+.flexcontainer {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+#header {
+    height: 12%;
+    background-color:white;
+}
+
+#settings{
+    height:78%;
+    background-color:green;
+}
+
+#back{
+    height:10%
+}

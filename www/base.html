@@ -24,15 +24,22 @@
             <div class="flexcontainer selector" id="startstop" onclick="selected(this);"/>
                 Select a mode of transport
             </div>
-            <div class="flexcontainer" id="stats" onclick="location.href='stats.html';">
-                View Stats
+            <div class="flexcontainer" id="bottombar">
+                <div id="dumbdiv">
+                    <div  id="stats" onclick="location.href='stats.html';">
+                        Stats
+                    </div>
+                    <div  id="settings" onclick="location.href='settings.html';">
+                        Settings
+                    </div>
+                </div>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/base.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
-        <script type="text/javascript" src="js/base.js"></script>
     </body>
 </html>
