@@ -37,12 +37,20 @@ html, body {
     background-color:green !important;
 }
 
+#personal_blank{
+    background-color:dimgrey;
+}
+
 #public {
     background-color:wheat;
 }
 
 .pub_selected{
     background-color:orange !important;
+}
+
+#public_blank{
+    background-color:dimgrey;
 }
 
 #private {
@@ -53,12 +61,24 @@ html, body {
     background-color:red !important;
 }
 
+#private_blank{
+    background-color:dimgrey;
+}
+
 .deselected{
     background-color:dimgrey !important;
 }
 
-#startstop {
-    background-color:blue;
+#please_select{
+     background-color: grey;
+}
+
+#start{
+     background-color: green;
+}
+
+#stop{
+     background-color: red;
 }
 
 #bottombar {
@@ -104,4 +124,18 @@ html, body {
     max-height: 100%;
     width: auto;
     height: 50%;
+}
+
+.content h4{
+    text-transform: none;
+    font-size: 2em;
+}
+
+.content h3{
+    text-transform: none;
+    font-size: 3em;
+}
+
+.hidden{
+    display:none;
 }
