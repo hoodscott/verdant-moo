@@ -6,4 +6,4 @@ Link to gh-pages site:
 http://hoodscott.github.io/verdant-moo/www/index.html
 
 Icons from:
-http://www.icons8.com
+icons8.com
