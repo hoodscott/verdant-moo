@@ -1,5 +1,11 @@
-var mode = ""
-var running = false
+// globals (soz)
+var mode = "";
+var running = false;
+var distance = 0;
+var emissions = 0;
+
+// from http://www.carbonindependent.org/sources_car.html
+em_per_mile = 430;
 
 // Function to change the content of green button
 function personal() {
@@ -14,18 +20,18 @@ function personal() {
     //un unselect button
     pers.classList.remove('deselected');
     pub.classList.add("deselected");
-    pub.classList.remove("pub_selected")
+    pub.classList.remove("pub_selected");
     priv.classList.add("deselected");
-    priv.classList.remove("priv_selected")
+    priv.classList.remove("priv_selected");
     
     // if button is not already selected
     if ( !pers.classList.contains('per_selected') ){
         // select this button
         pers.classList.add("per_selected");
         // set mode
-        mode = "personal"
+        mode = "personal";
         //show startbutton
-        startButtonOn()
+        startButtonOn();
     }
     else{
         // otherwise remove selected
@@ -33,7 +39,7 @@ function personal() {
         pub.classList.remove("deselected");
         priv.classList.remove("deselected");
         // hide start button
-        startButtonOff()
+        startButtonOff();
     }
     }
 }
@@ -55,9 +61,9 @@ function public() {
     //un unselect buttons
     pub.classList.remove('deselected');
     pers.classList.add("deselected");
-    pers.classList.remove("per_selected")
+    pers.classList.remove("per_selected");
     priv.classList.add("deselected");
-    priv.classList.remove("priv_selected")
+    priv.classList.remove("priv_selected");
     
     // if button is not already selected
     if ( !pub.classList.contains('pub_selected') ){
@@ -66,7 +72,7 @@ function public() {
         // set mode
         mode = "public"
         // show start button
-        startButtonOn()
+        startButtonOn();
     }
     else{
         // otherwise remove selected
@@ -74,7 +80,7 @@ function public() {
         pers.classList.remove("deselected");
         priv.classList.remove("deselected");
         //hide start button
-        startButtonOff()
+        startButtonOff();
     }
     }
 }
@@ -96,9 +102,9 @@ function private() {
     //un unselect button
     priv.classList.remove('deselected');
     pub.classList.add("deselected");
-    pub.classList.remove("pub_selected")
+    pub.classList.remove("pub_selected");
     pers.classList.add("deselected");
-    pers.classList.remove("per_selected")
+    pers.classList.remove("per_selected");
     
     // if button is not already selected
     if ( !priv.classList.contains('priv_selected') ){
@@ -107,14 +113,14 @@ function private() {
         // set mode
         mode = "private"
         // show start button
-        startButtonOn()
+        startButtonOn();
     }
     else{
         // otherwise remove selected
         priv.classList.remove('priv_selected');
         pub.classList.remove("deselected");
         pers.classList.remove("deselected");
-        startButtonOff()
+        startButtonOff();
     }
     }
 }
@@ -127,6 +133,7 @@ el_priv.addEventListener("click", function(){private()}, false);
 function startButtonOn(){
     var start = document.getElementById("start");
     var help = document.getElementById("please_select");
+    
     // swap help and start
     help.classList.add("hidden");
     start.classList.remove("hidden");
@@ -134,6 +141,7 @@ function startButtonOn(){
 function startButtonOff(){
     var start = document.getElementById("start");
     var help = document.getElementById("please_select");
+    
     //swap start and help
     start.classList.add("hidden");
     help.classList.remove("hidden");
@@ -184,12 +192,16 @@ function stop(){
     var stop = document.getElementById("stop");
     var help = document.getElementById("please_select");
     
-    // reset variables
-    running = false
-    mode = ""
+    // calculate stats
+    // %todo%
+    calcEmissions();
     
     // show popup of stats
-    // %todo%
+    var over = document.getElementById("overlay");
+    var over_cont = document.getElementById("overlay_content");
+    
+    over.classList.remove("hidden");
+    over_cont.classList.remove("hidden");
     
     //swap stop and help
     stop.classList.add("hidden");
@@ -201,19 +213,23 @@ function stop(){
     var priv = document.getElementById("private");
     var pers_h = document.getElementById("personal_blank");
     var pub_h = document.getElementById("public_blank");
-    var priv_h = document.getElementById("private_blank"); 
+    var priv_h = document.getElementById("private_blank");
+    
     // remove selected button
-    pers.classList.remove("per_selected")
-    pub.classList.remove("pub_selected")
-    priv.classList.remove("priv_selected")
+    pers.classList.remove("per_selected");
+    pub.classList.remove("pub_selected");
+    priv.classList.remove("priv_selected");
+    
     // un unselect the others
     pers.classList.remove("deselected")
     pub.classList.remove("deselected")
     priv.classList.remove("deselected")
+    
     // show defaukt buttons
     pers.classList.remove("hidden");
     pub.classList.remove("hidden");
     priv.classList.remove("hidden");
+    
     // hide blank buttons
     pers_h.classList.add("hidden");
     pub_h.classList.add("hidden");
@@ -222,3 +238,72 @@ function stop(){
 
 var el_stop = document.getElementById("stop");
 el_stop.addEventListener("click", function(){stop()}, false);
+
+// function to hide the overlay
+function hide_overlay(){
+    var over = document.getElementById("overlay");
+    var over_cont = document.getElementById("overlay_content");
+    
+    over.classList.add("hidden");
+    over_cont.classList.add("hidden");
+    
+    // reset variables
+    running = false;
+    mode = "";
+}
+
+var el_over = document.getElementById("overlay");
+var el_over_cont = document.getElementById("overlay_content");
+el_over.addEventListener("click", function(){hide_overlay()}, false);
+el_over_cont.addEventListener("click", function(){hide_overlay()}, false);
+
+
+//function to calculate the emissions of a journey
+function calcEmissions(){
+    //faked for now
+    distance = Math.floor(Math.random() * 20) + 1;  //random num between 1 and 20
+    
+    // calculate emissions from fake distance
+    worst_case = distance * em_per_mile;
+    if (mode == "personal"){
+        emissions = worst_case;
+    }
+    else if (mode == "public"){
+        emissions = worst_case / 2;
+    }
+    else{
+        emissions = 0;
+    }
+    
+    // show the details to the user
+    var dist = document.getElementById("distance");
+    var tran = document.getElementById("transport");
+    var emis = document.getElementById("emissions");
+    var butn = document.getElementById("fakebutton");
+    
+    //show distance
+    dist.innerHTML = distance + " miles"
+    
+    // show mode
+    tran.innerHTML = mode + " transport"
+    
+    // show emissions
+    emis.innerHTML = emissions + " grams of CO2"
+    
+    //colour button depending on mode of transport
+    if (mode=="personal"){
+        butn.classList.add("green_butn");
+        butn.classList.remove("orange_butn");
+        butn.classList.remove("red_butn");
+    }
+    else if (mode=="public"){
+        butn.classList.remove("green_butn");
+        butn.classList.add("orange_butn");
+        butn.classList.remove("red_butn");
+    }
+    else{
+        butn.classList.remove("green_butn");
+        butn.classList.remove("orange_butn");
+        butn.classList.add("red_butn");
+    }
+}
