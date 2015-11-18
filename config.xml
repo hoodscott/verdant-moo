@@ -116,13 +116,13 @@
     <access origin="*"/>
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
-    <gap:plugin name="cordova-plugin-whitelist" version="npm" />
+    <!--gap:plugin name="cordova-plugin-whitelist" version="npm" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+    <allow-intent href="geo:*" /-->
     <!--
     <platform name="android">
         <allow-intent href="market:*" />
