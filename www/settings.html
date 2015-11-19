@@ -13,16 +13,106 @@
     <body>
         <div class="app">
             <div class="flexcontainer" id="header">
-                <h1>Settings</h1>
+                <div class="wrapper">
+                    <div class="content">
+                        <h2 id="title">Settings</h2>
+                    </div>
+                </div>
             </div>
             <div class="flexcontainer" id="settings">
-                <h2>Set size of car</h2>
-                <p>slide goes here</p>
-                <h2>Set colours</h2>
-                <p> colour selector goes here</p>
+                <div class="flexcontainer inner">
+                    <div class="wrapper">
+                        <div class="content">
+                            <h2>Average Car Emission</h2>
+                            <fieldset>                                
+                                <input type ="range" min="380" max="660"
+                                    oninput="document.getElementById('rangeValLabel').innerHTML = this.value + 'g of CO2 per mile';"
+                                    step="40" name="rangeVal" id="rangeVal" value="420">
+                                </input>
+                                <br>
+                                <em id="rangeValLabel" style="font-style:normal;text-transform:none;">420g of CO2 per mile</em>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="flexcontainer inner">
+                    <div class="wrapper">
+                        <div class="content">
+                            <h2>Distance Calculation</h2>
+                            <div id="distance_boxes" class="checkboxes">
+                              <div class="checkboxgroup">
+                                <input type="radio" checked name="distance_radio" id="distance_radio1" />
+                                <label for="distance_radio1">As The Crow Flies</label>
+                              </div>
+                              <div class="checkboxgroup">
+                                <input type="radio" name="distance_radio" id="distance_radio2" />
+                                <label for="distance_radio2">Map API Call</label>                                
+                              </div>
+                            </div>
+                        </div>
+                     </div>   
+                </div>
+                <div class="flexcontainer inner even">
+                    <div class="wrapper">
+                        <div class="content">
+                            <h2>Unit Types</h2>
+                            <div id="unit_boxes" class="checkboxes">
+                              <div class="checkboxgroup">
+                                <input type="radio" name="unit_radio" id="unit_radio1" />
+                                <label for="unit_radio1">Metric</label>
+                              </div>
+                              <div class="checkboxgroup">
+                                <input type="radio" checked name="unit_radio" id="unit_radio2" />
+                                <label for="unit_radio2">British</label>                                
+                              </div>
+                              <div class="checkboxgroup">
+                                <input type="radio" name="unit_radio" id="unit_radio3" />
+                                <label for="unit_radio3">Imperial</label>                                
+                              </div>
+                            </div>
+                        </div>
+                     </div>   
+               </div>
+                <div class="flexcontainer inner even">
+                    <div class="wrapper">
+                        <div class="content">
+                            <h2>Colourblind Mode</h2>
+                            <div id="colour_boxes" class="checkboxes">
+                              <div class="checkboxgroup">
+                                <input type="radio" checked name="radio" id="colour_radio1" />
+                                <label for="colour_radio1">None</label>
+                              </div>
+                              <div class="checkboxgroup">
+                                <input type="radio" name="radio" id="colour_radio2" />
+                                <label for="colour_radio2">Deuteranopia</label>                                
+                              </div>                              
+                              <div class="checkboxgroup">
+                                <input type="radio" name="radio" id="colour_radio3" />
+                                <label for="colour_radio3">Protanopia</label>
+                              </div>                              
+                              <div class="checkboxgroup">
+                                <input type="radio" name="radio" id="colour_radio4" />
+                                <label for="colour_radio4">Tritanopia</label>                      
+                              </div>
+                            </div>
+                        </div>
+                     </div>   
+                </div>               
+               <div class="flexcontainer inner">
+                    <div class="wrapper">
+                        <div class="content">
+                            <h2>Attributions</h2>
+                            <p>Icons used in this app are from icons8.com</p>
+                        </div>
+                     </div>   
+                </div>
             </div>
-            <div class="flexcontainer" id="back" onclick="location.href='base.html';"">
-                back to home
+            <div class="flexcontainer" id="back" onclick="location.href='base.html';">
+                <div class="wrapper">
+                    <div class="content">
+                        <img src="img/home.png" alt="Home" >
+                    </div>
+                </div>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>

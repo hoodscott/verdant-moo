@@ -18,15 +18,148 @@ html, body {
 }
 
 #header {
-    height: 12%;
-    background-color:white;
+    height: 10%;
+    background-color:steelblue;
+}
+
+#title{
+    font-size:1.6em;
 }
 
 #settings{
     height:78%;
-    background-color:green;
+    background-color:lightslategray;
 }
 
+.inner{
+    height:20%;
+}
+
+.even{
+    background-color:slategrey;
+}
+
+.content h2{
+    font-size:1.7em;
+    font-style:none;
+    margin-bottom:1%;
+}
+
+p{
+    font-size:1em;
+    font-style:none;
+    text-transform:none;
+}
+
+.content fieldset{
+    border:none;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 50%;
+    height: 4px;
+    background: goldenrod;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: royalblue;
+    margin-top: -5px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+#slider label {
+    position: absolute;
+    width: 20px;
+    margin-left: -10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#slider {
+    width: 50%;
+    margin: 2em auto;
+}
+
+.checkboxes{
+    margin-top:0%;
+}
+
+label {
+    font-size:1em;
+    font-style:none;
+    text-transform:none;
+    text-decoration:underline;
+}
+
+.checkboxgroup {
+  display: inline-block;
+  text-align: center;
+}
+.checkboxgroup label {
+  display: block;
+}
+
+
+input[type=radio] {
+    -webkit-appearance: none;
+    border: 1px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: 8x;
+}
+
+input[type=radio]:checked {
+    -webkit-appearance: none;
+    border: 1px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: royalblue;
+    margin-top: 0px;
+}
+
+input[type=radio]:focus {
+    outline: none;
+}
+
+
+
+
 #back{
-    height:10%
+    height:12%;
+    background-color:cornflowerblue
+}
+
+.content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center
+    }
+    
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.content img {
+    max-width: 40%;
+    max-height: 100%;
+    width: auto;
+    height: 50%;
 }
