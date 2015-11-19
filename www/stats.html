@@ -12,13 +12,23 @@
     </head>
     <body>
         <div class="app flexcontainer">
-            <div id="topbar" onclick="location.href='base.html';">
-                back
-            </div>
+
             
             <div id="tabs">
-                <div class="tab" id="day-tab" onclick="daycontent();"> Daily View </div>
-                <div class="tab" id="month-tab" onclick="monthcontent();"> Monthly View </div>
+                <div class="tab" id="day-tab" onclick="daycontent();">
+                <div class="wrapper">
+                    <div class="wrapped_content">
+                        <h3>Daily Stats</h3>
+                    </div>
+                </div>
+                </div>
+                <div class="tab deselected" id="month-tab" onclick="monthcontent();">
+                <div class="wrapper">
+                    <div class="wrapped_content">
+                        <h3>Monthly Stats</h3>
+                    </div>
+                </div>         
+                </div>
             </div>    
                 
             <div class="content" id="day-content" style="" >
@@ -27,6 +37,14 @@
             
             <div class="content" id="month-content" style="display:none">
                 <h3>tab2</h3>
+            </div>
+            
+            <div id="home" onclick="location.href='base.html';">
+                <div class="wrapper">
+                    <div class="wrapped_content">
+                        <img src="img/home.png" alt="Home" >
+                    </div>
+                </div>
             </div>
             
         </div>

@@ -17,9 +17,27 @@ html, body {
     flex-direction: column;
 }
 
-#topbar {
-    background-color:grey;
-    height: 10%;
+.wrapped_content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center
+    }
+    
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.wrapped_content img {
+    max-width: 40%;
+    max-height: 100%;
+    width: auto;
+    height: 50%;
+}
+
+h3{
+    font-size:1.4em;
 }
 
 #tabs {
@@ -34,11 +52,15 @@ html, body {
 }
 
 #day-tab {
-    background-color:red;
+    background-color:mediumpurple;
 }
 
 #month-tab {
-    background-color:blue;
+    background-color:darkkhaki;
+}
+
+.deselected{
+    background-color: dimgrey !important;
 }
 
 .content {
@@ -46,9 +68,14 @@ html, body {
 }
 
 #day-content {
-    background-color:pink;
+    background-color:gainsboro;
 }
 
 #month-content {
-    background-color:green;
+    background-color:gainsboro;
+}
+
+#home {
+    background-color:blueviolet;
+    height: 12%;
 }
