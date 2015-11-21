@@ -71,6 +71,17 @@ h3{
     background-color:gainsboro;
 }
 
+#key{
+    float:left;
+    display:inline-block;
+    height:100%
+}
+
+#key img{
+    height:100%;
+    width:auto;
+}
+
 #scroll{
     clear:right;
     float:left;
@@ -104,7 +115,26 @@ h3{
 
 #month-content {
     background-color:gainsboro;
+
 }
+
+#month-content ul{
+    white-space:nowrap;
+    list-style:none;
+    height:100%;
+}
+
+#month-content ul li{
+    height:50%;
+    margin-left:-20px;
+}
+
+#month-content ul li img{
+    height:100%;
+    width:auto;
+    max-width:100%;
+}
+
 
 #home {
     background-color:blueviolet;
