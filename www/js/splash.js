@@ -1,9 +1,7 @@
 // add a random fact to the homepage
-var facts = ["co2 is bad",
-            "co2 kills trees",
-            "stop using the car",
-            "do  more greens",
-            "eat brussel sprouts"
+var facts = ["The average broad leaved tree will absorb 1 tonne of CO2 in it's lifetime (~100 years)",
+            "The average car produces 1 tonne of CO2 every 2500 miles",
+            "36,000,000,000 tonnes of CO2 were prodced in 2013"
             ]
 var rand_fact = Math.floor(Math.random() * 5);      
 var el_facts = document.getElementById('cool_fact');
