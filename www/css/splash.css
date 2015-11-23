@@ -31,7 +31,7 @@ html, body {
 
 #title_container{
     height:10%;
-    background-color:steelblue;
+    background-color:#00bf8f;
 }
 
 #fact_container{
@@ -61,7 +61,7 @@ html, body {
     margin-left:25%;
     height:50%;
     width:50%;
-    background-color:cornflowerblue;
+    background-color:#00bf8f;
 }
 
 h4{
