@@ -1,9 +1,9 @@
 // add a random fact to the homepage
-var facts = ["The average broad leaved tree will absorb 1 tonne of CO2 in it's lifetime (~100 years)",
-            "The average car produces 1 tonne of CO2 every 2500 miles",
-            "36,000,000,000 tonnes of CO2 were prodced in 2013"
+var facts = ["The average broad leaved tree will absorb 1 tonne of CO2 in it's lifetime (~100 years).",
+            "The average car produces 1 tonne of CO2 every 2500 miles.",
+            "36,000,000,000 tonnes of CO2 were produced in 2013."
             ]
-var rand_fact = Math.floor(Math.random() * 5);      
+var rand_fact = Math.floor(Math.random() * facts.length);      
 var el_facts = document.getElementById('cool_fact');
 el_facts.innerHTML = facts[rand_fact];
 
